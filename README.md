@@ -1,2 +1,2 @@
-# ARM Repository Template
-Basic repository template with required security workflows
+# ncreview
+Open-source ncreview, to be used for reviewing netCDF files.
