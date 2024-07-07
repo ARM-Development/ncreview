@@ -1,0 +1,388 @@
+#status_indicator {
+	font-size: 2em;
+	color: #333;
+	padding: 1em;
+	float: center;
+}
+body {
+	font-family: sans-serif;
+	padding: 0;
+	margin: 0;
+	transition-duration: 1.5s;
+}
+h1 {
+	font-size: 1.5em;
+	color:#333;
+}
+summary:first-child~*
+{
+	display: none;
+}
+details[open]>*
+{
+	display: block;
+}
+details>summary:first-child
+{
+	display: block;
+	font-size: 16px;
+	transition-duration: 0s;
+}
+
+summary:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+details:focus,
+summary:focus,
+button:focus {
+    outline: none;
+}
+/*
+details:before
+{
+	content:'\\25BA';
+	font-family:serif;
+	font-size:.75em;
+	margin-top:.25em;
+	margin-left:.25em;
+	position:absolute
+}
+details[open]:before
+{
+	content:'\\25BC'
+}
+
+summary:first-child
+{
+	text-indent:1.25em
+}
+
+details::before
+{
+	content:'';
+	width:0;
+	height:0;
+	border:solid transparent;
+	border-left-color:inherit;
+	border-width:.25em .5em;
+	margin-top:.75em;
+	margin-left:.5em;
+	-webkit-transform:rotate(0deg) scale(1.5);
+	-ms-transform:rotate(0deg) scale(1.5);
+	transform:rotate(0deg) scale(1.5);
+	-webkit-transform-origin:25% 50%;
+	-ms-transform-origin:25% 50%;
+	transform-origin:25% 50%;
+	-webkit-transition:-webkit-transform .1s ease-out;
+	transition:transform .1s ease-out
+}
+details[open]::before
+{
+	content:'';
+	-webkit-transform:rotate(90deg) scale(1.5);
+	-ms-transform:rotate(90deg) scale(1.5);
+	transform:rotate(90deg) scale(1.5)
+}
+*/
+summary::-webkit-details-marker
+{
+	display:none
+}
+
+th {
+	font-weight: bold;
+}
+
+th, td {
+	padding: 0px 10px;
+}
+
+th.added, td.added {
+	color:#2b2;
+}
+th.removed, td.removed {
+	color:#b22;
+}
+
+th.same, td.same {
+	color:#000;
+}
+
+/*summary {
+	transition-duration: 1.5s;
+}*/
+
+.summary {
+	color: #e85555;
+	font-weight: bold;
+}
+
+.red {
+	color:#FF0000;
+}
+
+.black {
+	color:#000000;
+}
+
+.right {
+	float: right;
+}
+
+#banner {
+	padding: 20px 30px 15px 30px;
+	color: #fff;
+	background-color: #333;
+}
+#banner h1 {
+	color: #fff;
+	padding: 0;
+	margin: 0;
+	font-weight: normal;
+	letter-spacing: 3px;
+}
+#banner a {
+	color: LightSteelBlue;
+}
+
+#legend {
+	position: fixed;
+    right: 20px;
+	background: white;
+	padding: 0 0 1em 1em;
+	transition-duration: 1.5s;
+}
+
+#legend span.old.data {
+	color: #f2727f;
+}
+
+#legend span.new.data {
+	color: #7f7fff;
+}
+
+#legend span.overlap.data {
+	color: #902190;
+}
+
+#main {
+	padding: 30px;
+}
+
+.summary_table {
+	overflow-x: scroll;
+}
+
+.summary_table tbody{
+	/*overflow-x: auto;*/
+	overflow-y: scroll;
+	resize: vertical;
+	display: block;
+	/*max-height: 480px;*/
+	padding-right: 17px; /* make room for the scroll bar on the right for windows users*/
+}
+
+.summary_table caption {
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.summary_table thead td {
+	font-weight: bold;
+}
+
+.summary_table thead tr{
+	position: relative;
+}
+
+.summary_table th {
+	background-color: #e85555;
+    color: white;
+    white-space: nowrap;
+    transition-duration: 1.5s;
+}
+
+.summary_table tbody tr:nth-child(even){
+	background-color: #f2f2f2;
+	transition-duration: 1.5s;
+}
+
+#header span {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 5px;
+	background-color: lightgray;
+	transition-duration: 1.5s;
+}
+
+#footer span {
+	margin-left: 5px;
+	margin-right: 5px;
+	color: black;
+}
+
+#options div {
+	padding-top: 5px;
+}
+
+#options label input {
+	margin-right: 1em;
+}
+
+.expander_button {
+	text-align: center;
+	transition-duration: 1.5s;
+	font-size: 12px;
+}
+
+.expander_button:hover {
+	cursor: pointer;
+}
+
+th.totalchanged {
+	background-color: #22b;
+}
+
+th[selected] {
+	border: 1px solid black;
+}
+
+#options label span,
+summary.same,
+span.same,
+div.same {
+	color:#666;
+	font-weight: bold;
+}
+summary.changed,
+span.changed,
+div.changed,
+th.changed,
+td.changed {
+	color:#22b;
+	font-weight: bold;
+}
+summary.added,
+span.added,
+div.added {
+	color:#2b2;
+	font-weight: bold;
+}
+summary.removed,
+span.removed,
+div.removed {
+	color:#b22;
+	font-weight: bold;
+}
+
+div.staticValue {
+	text-indent: -1em;
+	padding-left: 2em;
+}
+span.ellipsis {
+	font-style: italic;
+}
+
+/* Timeline css */
+rect.listener {
+	fill: none;
+	cursor: move;
+  	pointer-events: all;
+}
+.same.diff.odd {
+	fill: #777;
+}
+.changed.diff.odd {
+	fill: #55d;
+}
+.added.diff.odd {
+	fill: #5d5;
+}
+.removed.diff.odd {
+	fill: #d55;
+}
+.same.diff.even {
+	fill: #666;
+}
+.changed.diff.even{
+	fill: #33c;
+}
+.added.diff.even{
+	fill: #3c3;
+}
+.removed.diff.even{
+	fill: #c33;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.line {
+	fill:none;
+	stroke-width:1.5;
+	stroke:purple;
+}
+.old.line {
+	stroke:rgba(255,0,0, 0.5);
+}
+.new.line {
+	stroke:rgba(0,0,255, 0.5);
+}
+circle{
+	fill:purple;
+}
+circle.old {
+	fill:rgba(255,0,0, 0.5);
+}
+circle.new {
+	fill:rgba(0,0,255, 0.5);
+}
+rect.old.bar {
+	fill:rgba(255,0,0, 0.5);
+}
+
+rect.new.bar {
+	fill:rgba(0,0,255, 0.5);
+}
+
+.mouse.date {
+	font-family: sans-serif;
+}
+.date.line {
+	stroke:#000;
+	stroke-width:1;
+	shape-rendering:crispEdges;
+}
+
+.same.area {
+	fill: rgba(80, 80, 80, 0.0);
+	border: 1px solid #808080;
+	font-weight: normal;
+}
+.changed.area {
+	fill: rgba(0, 0, 255, 0.1);
+	background-color: rgba(0, 0, 255, 0.1);
+	font-weight: normal;
+}
+.added.area {
+	fill: rgba(0, 255, 0, 0.1);
+	background-color: rgba(0, 255, 0, 0.1);
+	font-weight: normal;
+}
+.removed.area {
+	fill: rgba(255, 0, 0, 0.1);
+	background-color: rgba(255, 0, 0, 0.1);
+	font-weight: normal;
+}

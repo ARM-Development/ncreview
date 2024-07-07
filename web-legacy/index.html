@@ -1,0 +1,55 @@
+<head>
+<title> ncReview </title>
+<link rel="stylesheet" type="text/css" href="css/ncreview.css">
+<link rel="stylesheet" type="text/css" href="css/night.css">
+<meta charset="utf-8">
+<script src="js/d3.min.js"      charset="utf-8"></script>
+<script src="js/utils.js"       charset="utf-8"></script>
+<script src="js/timeline.js"    charset="utf-8"></script>
+<script src="js/plot.js"        charset="utf-8"></script>
+<script src="js/bargraph.js"    charset="utf-8"></script>
+<script src="js/variable.js"    charset="utf-8"></script>
+<script src="js/datastream.js"  charset="utf-8"></script>
+<script src="js/static_data.js" charset="utf-8"></script>
+<script src="js/structure.js"   charset="utf-8"></script>
+<script src="js/load_json.js"   charset="utf-8"></script>
+<script src="js/better-dom.js"></script>
+<script src="js/better-details-polyfill.js"></script>
+
+</head>
+<body onload="load_from_url()">
+<!--
+<div id="banner">
+	<div class="right">
+		For best results, use <a target="_blank" href="http://www.google.com/chrome">Google Chrome</a>.
+	</div>
+	<h1>ncreview</h1>
+</div>
+-->
+<div id="main">
+	<details id="legend">
+		<summary style="float:right">Legend</summary>
+		<span style='font-family:sans-serif'>
+			<style>
+				#legend span span{
+					width: 100%;
+					display: inline-block;
+				}
+			</style>
+			<span class="same"   > Same    </span><br>
+			<span class="changed"> Changed </span><br>
+			<span class="added"  > Added   </span><br>
+			<span class="removed"> Removed </span><br>
+			<span class="summary"> Summary </span><br>
+			<span class="removed area">Only old data</span><br>
+			<span class="added area">Only new data</span><br>
+			<span class="changed area">Old &amp; new data; different</span><br>
+			<span class="same area">Old &amp; new data; same</span><br>
+			<span class="old data"   >--- Old data</span><br>
+			<span class="new data"  >---  New data</span><br>
+			<span class="overlap data">--- Overlap of old &amp; new</span><br>
+		</span>
+	</details>
+	<div id="status_indicator">No Data Loaded</div>
+</div>
+</body>

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ ! -f "$RPM_INSTALL_PREFIX/lib/ncrpy/install.sh" ]; then
+    rm -rf $RPM_INSTALL_PREFIX/lib/ncrpy
+fi

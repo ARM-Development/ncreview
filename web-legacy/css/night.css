@@ -1,0 +1,150 @@
+body.night {
+	background-color: #171717;
+	color: #a9a9a9;
+}
+
+body.night th,
+body.night td {
+	color: #a9a9a9;
+}
+
+body.night .red {
+	color: #b34d4d;
+}
+
+body.night .black {
+
+}
+
+body.night .summary {
+	color: rebeccapurple;
+}
+
+body.night th[selected] {
+	border: 1px solid lightgray;
+}
+
+body.night #options label span,
+body.night summary.same,
+body.night span.same,
+body.night div.same {
+	color: #a9a9a9;
+}
+
+body.night summary.changed,
+body.night span.changed,
+body.night div.changed,
+body.night th.changed,
+body.night td.changed {
+	color:#7b7bea;
+}
+
+body.night summary.added,
+body.night span.added,
+body.night div.added {
+	color:#9ad864;
+}
+
+body.night summary.removed,
+body.night span.removed,
+body.night div.removed {
+	color:#cc2c2c;
+}
+
+body.night #legend span.old.data {
+	color: #fc0000;
+}
+
+body.night #legend span.new.data {
+	color: #0c5dbb;
+}
+
+body.night #legend span.overlap.data {
+	color: #8e4486;
+}
+
+body.night .summary_table th.totalchanged {
+	background-color: #14147b;
+}
+
+body.night .summary_table th {
+	background-color: rebeccapurple;
+    color: #d2caca;
+}
+
+body.night .summary_table tbody tr:nth-child(even){
+	background-color: #403939;
+}
+
+body.night .summary_table caption {
+	color: #a9a9a9;
+}
+
+body.night #legend {
+	background: #171717;
+}
+
+body.night #footer {
+	background-color: #2c2c2c;
+}
+
+body.night #footer span {
+	color: white;
+}
+
+body.night #footer button {
+	background-color: black;
+	color: white;
+}
+
+body.night .expander_button {
+	background-color: #2c2c2c;
+	color: white;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+
+body.night svg text {
+	fill: #a9a9a9;
+}
+
+body.night .old.line, {
+	stroke:rgba(255,0,0, 1);
+}
+body.night .new.line {
+	stroke:rgba(0,130,255, 0.5);
+}
+body.night circle.old {
+	fill:rgba(255,0,0, 1);
+}
+body.night circle.new {
+	fill:rgba(0,130,255, 0.5);
+}
+
+body.night rect.old.bar {
+	fill:rgba(255,81,81, 0.5);
+}
+body.night rect.new.bar {
+	fill:rgba(57, 57, 191, 0.61);
+}
+
+body.night .date.line {
+	stroke:#555;
+}
+
+body.night .same.area {
+	fill: rgba(80, 80, 80, 0.0);
+	border: 1px solid #808080;
+}
+body.night .changed.area {
+	fill: rgba(0, 0, 255, 0.1);
+	background-color: rgba(0, 0, 255, 0.1);
+}
+body.night .added.area {
+	fill: rgba(0, 255, 0, 0.1);
+	background-color: rgba(121, 255, 121, 0.3);
+}
+body.night .removed.area {
+	fill: rgba(255, 0, 0, 0.3);
+	background-color: rgba(255, 0, 0, 0.3);
+}

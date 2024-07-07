@@ -1,0 +1,45 @@
+#------------------------------------------------------------------------------
+# APR Configuration File
+#
+# Detailed APR documentation can be found here:
+# https://code.arm.gov/distrib/release/blob/master/README.md
+#------------------------------------------------------------------------------
+
+comp: dsutil
+package-name: ncrpy
+default-prefix: /apps/ds
+architecture: noarch
+
+build-target: ''
+build-script: package/apr_build.sh --py
+package-script-dir: package
+
+scriptlet-installer: root
+
+include-items:
+  - (package/apps/ds)/bin
+  - (package/apps/ds)/lib
+
+package-dependency:
+  - python3.9-python
+  - python3.9-pip
+
+file-dependency: []
+
+obsoletes: dsutil-ncreview
+
+author:
+  name: Gabriel Gibler
+  organization: Battelle, PNNL
+  email: gabriel.gibler@pnnl.gov
+  phone: 509-375-4513
+
+synopsis: >
+    ncreview
+
+description: >
+    A command-line tool with web display for visualizing netCDF summaries and
+    comparisons
+
+notification-list:
+  - N/A

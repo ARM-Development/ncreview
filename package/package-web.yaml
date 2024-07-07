@@ -1,0 +1,49 @@
+#------------------------------------------------------------------------------
+# APR Configuration File
+#
+# Detailed APR documentation can be found here:
+# https://code.arm.gov/distrib/release/blob/master/README.md
+#------------------------------------------------------------------------------
+
+comp:           dsutil
+package-name:   ncrweb
+default-prefix: /apps/ds
+architecture:   noarch
+build-target:   ''
+
+build-script:   package/apr_build.sh
+
+include-items:
+   - (package/apps/ds)/conf
+   - (package/apps/ds)/www
+
+exclude-items: []
+
+package-dependency: []
+
+file-dependency: []
+
+obsoletes: dsutil-ncreview
+
+author:
+  name:         Sherman Beus
+  organization: Battelle, PNNL
+  email:        sherman.beus@pnnl.gov
+  phone:        509-375-2662
+
+service-now: []
+
+special-instructions: >
+    None
+
+synopsis: >
+    ncreview
+
+description: >
+    A web display for visualizing netCDF summaries and comparisons
+
+notification-list:
+  - N/A
+
+notes: >
+    None.

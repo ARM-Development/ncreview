@@ -1,0 +1,16 @@
+#!/bin/sh
+
+user="cm"
+prefix=$RPM_INSTALL_PREFIX
+
+if [ -z "$prefix" ]; then
+    prefix="/apps/ds"
+fi
+
+logfile="/var/tmp/ncrpy.post.log"
+now=$(date)
+
+echo "----------------------------------------------------" >> $logfile
+echo "$now" >> $logfile
+
+$prefix/lib/ncrpy/install.sh >> $logfile 2>&1
